@@ -8,7 +8,7 @@ request(webAddress, function(error, response, body) {
   console.log(response);
   fs.writeFile(`${savedPath}`, body, function(err) {
     if(!err) {
-      console.log(`Download and saved to ${savedPath}`);
+      console.log(`Download and saved ${body.length}bytes to ${savedPath}`);
     } else {
       throw err;
     }
